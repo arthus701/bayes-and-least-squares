@@ -122,6 +122,7 @@ with mcModel:
         progressbar=True,
         chains=4,
         target_accept=0.95,
+        random_seed=161,
         postprocessing_backend='cpu',
     )
     idata.to_netcdf(

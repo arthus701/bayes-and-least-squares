@@ -130,11 +130,11 @@ for it in range(2):
             prior_idata
             .posterior['spline_coeffs']
             .values
-            .reshape(-1, nr_splines)[:5].T
+            .reshape(-1, nr_splines).T
         )
 
         pri_samples = design_matrix_arr @ cfs
-        pri_samples = pri_samples[:, [1, 0, 2, 3, 4]]
+        pri_samples = pri_samples[:, [21, 343, 112, 101, 4]]
 
         posterior_idata = az.from_netcdf(
             '../../out/posterior_samples_splines.nc',
